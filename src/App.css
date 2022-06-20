@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: auto 2fr 0.5fr;
+  height: 100vh;
+}
+
+.navbar {
+  grid-column-start: span 4;
+  padding: 7px 10px;
+  font-weight: bold;
+}
+
+.player {
+  grid-column-start: span 3;
+}
+
+.playlist {
+  overflow: auto;
+}
+
+.playlist .list {
+  padding: 7px 10px;
+}
+
+.playlist .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  top: 0;
+  position: sticky;
+  padding: 7px 10px 7px 10px;
+}
+
+.playlist .header h3 {
+  margin: 0;
+}
+
+.playlist .list-item {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.playlist img {
+  width: 168px;
+  margin-right: 10px;
+}
+
+.playlist p {
+  margin: 0;
+}
+
+.snapshots {
+  grid-column-start: span 4;
+}
+
+.snapshots .header {
+  display: flex;
+  background-color: white;
+  padding: 7px 10px 7px 10px;
+}
+
+.snapshots .header h3 {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 10px;
+  top: 100px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal .close {
+  cursor: pointer;
+  border: 0;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal input[type="text"] {
+  width: 100%;
+}
+
+.modal .form-body {
+  margin-bottom: 15px;
+}
+
+.modal .actions button {
+  margin-left: 10px;
+}
+
+
+.error-text {
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+input[type="text"] {
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: .375rem;
+}
+
+.error {
+  border-color: #dc3545 !important;
+}
